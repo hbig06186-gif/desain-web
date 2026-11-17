@@ -1,0 +1,542 @@
+/* =========================
+   PENGATURAN DASAR
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f4f5fa;
+    color: #252b45;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 240px;
+    background: #1956d8;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+.sidebar h2 {
+    background: #e7e8ec;
+    color: #1754c4;
+    font-size: 21px;
+    padding: 25px 18px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 17px 25px;
+    margin-bottom: 3px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #1748ad;
+}
+
+nav a.active {
+    background: #173f91;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+}
+
+#signOut {
+    margin-top: auto;
+    padding-bottom: 30px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+    padding: 25px 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+header h3 {
+    color: #252b45;
+}
+
+header input {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #e5e5ee;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    background: linear-gradient(120deg, #5146d8, #8279f5);
+    color: white;
+    padding: 30px;
+    border-radius: 13px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    animation: welcomeMasuk 1s ease forwards;
+}
+
+.welcome-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.welcome h1 {
+    font-size: 27px;
+    margin-bottom: 12px;
+    animation: masukSamping 1.5s ease-out;
+}
+
+.welcome-text p {
+    font-size: 14px;
+    line-height: 1.7;
+    animation: welcomeMasuk 1.5s ease;
+}
+
+/* FOTO PROFIL KANAN */
+
+.welcome-profile {
+    text-align: center;
+    min-width: 110px;
+    flex-shrink: 0;
+    color: white;
+}
+
+.welcome-profile img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.welcome-profile h4 {
+    margin-top: 7px;
+    font-size: 13px;
+}
+
+.welcome-profile p {
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+/* ANIMASI */
+
+@keyframes masukSamping {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes welcomeMasuk {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   CONTENT GRID
+========================= */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.04);
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   STATISTIK
+========================= */
+
+.chart-container {
+    display: flex;
+    height: 260px;
+    gap: 12px;
+    padding-top: 15px;
+}
+
+.y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    font-size: 11px;
+    color: #777;
+    min-width: 30px;
+    text-align: right;
+}
+
+.chart-area {
+    position: relative;
+    flex: 1;
+    height: 100%;
+}
+
+.chart-grid {
+    position: absolute;
+    inset: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chart-grid span {
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+}
+
+.chart {
+    position: absolute;
+    inset: 0 0 25px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.bar-item {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.bar {
+    width: 75%;
+    max-width: 65px;
+    min-width: 20px;
+    background: #0756b5;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    animation: grafikMasuk 1.2s ease both;
+}
+
+.bar span {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.bar-item p {
+    position: absolute;
+    bottom: -25px;
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+}
+
+@keyframes grafikMasuk {
+    from {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+
+    to {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+}
+
+.average {
+    margin-top: 35px;
+    color: #0756b5;
+    font-size: 15px;
+}
+
+/* =========================
+   PROGRES KELAS
+========================= */
+
+.class-item {
+    margin-bottom: 20px;
+}
+
+.class-item h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.class-item p {
+    color: #9299aa;
+    font-size: 11px;
+    margin-bottom: 9px;
+}
+
+.progress {
+    height: 7px;
+    background: #eeeef5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress div {
+    height: 100%;
+    background: #0756b5;
+    border-radius: 10px;
+}
+
+/* =========================
+   AKTIVITAS
+========================= */
+
+.activity {
+    border-bottom: 1px solid #eee;
+    padding: 14px 0;
+}
+
+.activity h4 {
+    font-size: 12px;
+    margin-bottom: 7px;
+}
+
+.activity p {
+    font-size: 11px;
+    color: #9299aa;
+}
+
+/* =========================
+   DOKUMEN
+========================= */
+
+.documents {
+    margin-top: 20px;
+}
+
+.document {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-top: 1px solid #eee;
+}
+
+.document p {
+    flex: 1;
+    font-size: 12px;
+}
+
+.document span {
+    font-size: 22px;
+}
+
+.document a {
+    color: #0756b5;
+    text-decoration: none;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    color: #999;
+    font-size: 11px;
+    padding: 25px;
+}
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.section-highlight {
+    background-color: #f5e6c8 !important;
+    border: 3px solid #d9b978 !important;
+    box-shadow: 0 0 20px rgba(180, 140, 70, 0.4);
+    transition: 0.4s ease;
+}
+
+.section-highlight h3,
+.section-highlight p,
+.section-highlight h4,
+.section-highlight strong {
+    color: #252b45;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar h2 {
+        margin-bottom: 12px;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    #signOut {
+        margin-top: 0;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    header input {
+        width: 100%;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        flex-wrap: wrap;
+    }
+
+    .welcome h1 {
+        font-size: 20px;
+    }
+
+    .welcome-profile {
+        margin-left: auto;
+    }
+
+    .document {
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================
+   AKSESIBILITAS
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* SCROLL SECTION */
+
+#home,
+#mahasiswa,
+#kelas,
+#aktivitas,
+#statistik,
+#dokumen,
+#settings {
+    scroll-margin-top: 25px;
+}
