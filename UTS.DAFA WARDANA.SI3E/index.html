@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <h2>Royal Dashboard</h2>
+
+        <nav>
+            <a href="#home" class="active">⌂ Home</a>
+            <a href="#mahasiswa">♙ Mahasiswa</a>
+            <a href="#kelas">▦ Kelas</a>
+            <a href="#aktivitas">◷ Aktifitas</a>
+            <a href="#statistik">▥ Statistik</a>
+            <a href="#dokumen">▤ Dokumen</a>
+            <a href="#settings">⚙ Settings</a>
+            <a href="#" id="signOut">⇥ Sign Out</a>
+        </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="home">
+
+        <header>
+            <h3>Royal Dashboard</h3>
+            <input type="text" id="searchInput"
+                placeholder="Cari kelas, dokumen, aktifitas dll...">
+        </header>
+
+        <!-- WELCOME -->
+        <section class="welcome" id="mahasiswa">
+
+            <div class="welcome-text">
+                <h1 class="welcome-title">
+                    Selamat Datang, Dafa Wardana
+                    Kelas SI-3E
+                </h1>
+
+                <p>
+                    Kamu memiliki Statistik, 3 Progres Kelas,
+                    4 Aktifitas Selanjutnya dan 3 Lampiran Dokumen
+                    yang ada pada aplikasi ini.
+                </p>
+            </div>
+
+            <!-- FOTO PROFIL DI KANAN -->
+            <div class="welcome-profile">
+                <img src="gambar/31b48f50-266e-4600-9acc-cc2b1e880642.jpg">
+            </div>
+
+        </section>
+
+        <!-- CONTENT GRID -->
+        <section class="content-grid">
+
+            <!-- STATISTIK -->
+            <div class="card" id="statistik">
+
+                <h3>Statistik Mahasiswa</h3>
+
+                <div class="chart-container">
+
+                    <div class="y-axis">
+                        <span>60%</span>
+                        <span>50%</span>
+                        <span>40%</span>
+                        <span>30%</span>
+                        <span>20%</span>
+                        <span>10%</span>
+                        <span>0%</span>
+                    </div>
+
+                    <div class="chart-area">
+
+                        <div class="chart-grid">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="chart">
+
+                            <div class="bar-item">
+                                <div class="bar" style="height:53%">
+                                    <span>32%</span>
+                                </div>
+                                <p>Class A</p>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar" style="height:40%">
+                                    <span>24%</span>
+                                </div>
+                                <p>Class B</p>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar" style="height:75%">
+                                    <span>45%</span>
+                                </div>
+                                <p>Class C</p>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar" style="height:33%">
+                                    <span>20%</span>
+                                </div>
+                                <p>Class D</p>
+                            </div>
+
+                            <div class="bar-item">
+                                <div class="bar" style="height:92%">
+                                    <span>55%</span>
+                                </div>
+                                <p>Class E</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <h4 class="average">Avg Point : 82.5</h4>
+
+            </div>
+
+            <!-- PROGRES KELAS -->
+            <div class="card" id="kelas">
+
+                <h3>Progres Kelas</h3>
+
+                <div class="class-item">
+                    <h4>Matakuliah A</h4>
+                    <p>78 Pendaftar</p>
+                    <div class="progress">
+                        <div style="width:78%"></div>
+                    </div>
+                </div>
+
+                <div class="class-item">
+                    <h4>Matakuliah B</h4>
+                    <p>30 Pendaftar</p>
+                    <div class="progress">
+                        <div style="width:65%"></div>
+                    </div>
+                </div>
+
+                <div class="class-item">
+                    <h4>Matakuliah C</h4>
+                    <p>40 Pendaftar</p>
+                    <div class="progress">
+                        <div style="width:52%"></div>
+                    </div>
+                </div>
+
+                <div class="class-item">
+                    <h4>Matakuliah D</h4>
+                    <p>10 Pendaftar</p>
+                    <div class="progress">
+                        <div style="width:35%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- AKTIVITAS -->
+            <div class="card" id="aktivitas">
+
+                <h3>Aktifitas Selanjutnya</h3>
+
+                <div class="activity">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <p>Senin, 15 Januari 2025</p>
+                </div>
+
+                <div class="activity">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <p>Selasa, 15 Februari 2025</p>
+                </div>
+
+                <div class="activity">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <p>Rabu, 15 Maret 2025</p>
+                </div>
+
+                <div class="activity">
+                    <h4>Perkuliahan Daring 1</h4>
+                    <p>Kamis, 15 April 2025</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DOKUMEN -->
+        <section class="card documents" id="dokumen">
+
+            <h3>Lampiran Dokumen</h3>
+
+            <div class="document">
+                <span>📄</span>
+                <p>Lampiran Dokumen 1 - Matakuliah A</p>
+                <a href="#">Lihat Dokumen</a>
+            </div>
+
+            <div class="document">
+                <span>📄</span>
+                <p>Lampiran Dokumen 2 - Matakuliah B</p>
+                <a href="#">Lihat Dokumen</a>
+            </div>
+
+            <div class="document">
+                <span>📄</span>
+                <p>Lampiran Dokumen 3 - Matakuliah C</p>
+                <a href="#">Lihat Dokumen</a>
+            </div>
+
+        </section>
+
+        <!-- SETTINGS -->
+        <section class="card documents" id="settings">
+
+            <h3>Settings</h3>
+            <p>Pengaturan akun mahasiswa</p>
+
+            <div class="document">
+                <p>Nama Mahasiswa</p>
+                <strong>Dafa Wardana</strong>
+            </div>
+
+            <div class="document">
+                <p>Program Studi</p>
+                <strong>Sistem Informasi</strong>
+            </div>
+
+            <div class="document">
+                <p>Universitas</p>
+                <strong>Universitas Royal</strong>
+            </div>
+
+        </section>
+
+        <footer>
+            © 2025 Universitas Royal
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
